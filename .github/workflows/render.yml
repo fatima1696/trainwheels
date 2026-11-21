@@ -1,0 +1,38 @@
+name: Render trainwheels video
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  joined:
+    name: Joined video (with captions)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run render
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trainwheels-video
+          path: out/trainwheels.mp4
+
+  scenes:
+    name: Nine separate scenes (no captions)
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run render:scenes
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coffee-ring-scenes
+          path: out/scenes/*.mp4
