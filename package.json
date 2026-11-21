@@ -1,0 +1,20 @@
+{
+  "name": "train-wheels-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio index.tsx",
+    "render": "remotion render index.tsx TrainWheels out/train-wheels.mp4",
+    "render:scenes": "remotion render index.tsx Scene1 out/scenes/Scene1.mp4 && remotion render index.tsx Scene2 out/scenes/Scene2.mp4 && remotion render index.tsx Scene3 out/scenes/Scene3.mp4 && remotion render index.tsx Scene4 out/scenes/Scene4.mp4 && remotion render index.tsx Scene5 out/scenes/Scene5.mp4 && remotion render index.tsx Scene6 out/scenes/Scene6.mp4 && remotion render index.tsx Scene7 out/scenes/Scene7.mp4 && remotion render index.tsx Scene8 out/scenes/Scene8.mp4 && remotion render index.tsx Scene9 out/scenes/Scene9.mp4 && remotion render index.tsx Scene10 out/scenes/Scene10.mp4",
+    "voice": "node voice.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.528",
+    "@remotion/google-fonts": "4.0.528",
+    "@remotion/media": "4.0.528",
+    "@remotion/media-utils": "4.0.528",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.528"
+  }
+}
