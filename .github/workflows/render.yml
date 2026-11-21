@@ -19,7 +19,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: trainwheels-video
-          path: out/trainwheels.mp4
+          path: out/coffee-ring.mp4
 
   scenes:
     name: Nine separate scenes (no captions)
